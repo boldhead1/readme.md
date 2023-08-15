@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>form 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #body1 {
+            background-color: rgb(205, 232, 193);
+        }
+        
+        #pass,
+        #uName {
+            margin-top: 5px;
+            background-color: azure;
+            width: 250px;
+            height: 25px;
+            border-radius: 5px;
+            border: 2px inset silver;
+        }
+        
+        .cls {
+            margin-left: 2px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        
+        #sub {
+            width: 80px;
+            height: 40px;
+            margin-top: 10px;
+            font-size: 15px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            background-color: darkolivegreen;
+        }
+        
+        #res {
+            background-color: purple;
+            transition: 02s;
+        }
+        
+        #res:hover {
+            background-color: red;
+        }
+        
+        #sub:hover {
+            background-color: green;
+            transition: 2s ease-in;
+        }
+        
+        #par {
+            font-size: 10px;
+            color: black;
+        }
+        
+        #par a {
+            font-size: 10px;
+        }
+        
+        #form2 {
+            text-align: center;
+        }
+        
+        .control {
+            margin-left: 25%;
+            width: 400px;
+            height: 205px;
+            background-color: rgb(159, 185, 185);
+            border-radius: 5px;
+            border: 4px double gray;
+            font-family: sans-serif
+        }
+        
+        .log {
+            font-family: cursive;
+            font-size: 20px;
+            color: rgb(5, 2, 10);
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        
+        #img {
+            width: 100px;
+            height: 120px;
+        }
+    </style>
+</head>
+
+<body id="body1" style="margin-left: 10px;">
+    <div class="control">
+        <form id="form2" onsubmit="return formValidation()">
+            <div class="log">Login Form</div>
+            <div class="displayError"></div>
+            <input type="text" id="uName" placeholder="UserName">
+            <input type="password" id="pass" placeholder="Password"><br>
+            <button type="submit"  id="sub">Login</button>
+            <p id="par">
+                <a href="register.html">Signup</a> or forget your
+                <a href="passwordforget.html">Password</a>or
+                <a href="usernameforget.html">User Name?</a>
+
+            </p>
+        </form>
+    </div>
+
+    <button onclick="turn()" style="width: 100px;height: 30px; background-color:aquamarine; margin-right: 20px; ">Turn On</button>
+    <img src="off.jpeg" id="img1" class="src " style="width: 100px;height: 120px;">
+    <button style="width: 100px;height: 30px; background-color:rgb(198, 31, 70) " onclick="turnOff() ">Turn Off</button>
+
+
+</body>
+<script>
+    var displayError = document.getElementById("displayError");
+    var uName = document.getElementById("uName");
+    var pass = document.getElementById("pass");
+    var passError = document.getElementById("passError");
+    var img = document.getElementById("img1");
+
+
+    function turn() {
+
+        img.src = "on.jpeg";
+    }
+
+    function turnOff() {
+
+        img.src = "off.jpeg";
+    }
+</script>
+
+</html>
